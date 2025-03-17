@@ -1,0 +1,32 @@
+name: Sync Notion to GitHub
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+
+jobs:
+  sync_notion_to_github:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r github-issues-integration-notion_src/requirements.txt
+
+      - name: Run sync_notion_to_github
+        run: python github-issues-integration-notion_src/main.py  sync_notion_to_github
+        env:
+          PERSONAL_GITHUB_ACCESS_KEY: ${{ secrets.PERSONAL_GITHUB_ACCESS_KEY }}
+          REPO_OWNER: ${{ github.repository_owner }}
+          REPO_NAME: ${{ github.event.repository.name }}
+          NOTION_KEY: ${{ secrets.NOTION_KEY }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
