@@ -2,8 +2,8 @@ name: Sync Notion to GitHub
 
 on:
   schedule:
-    - cron: '7 21 * * *'
-
+    - cron:  '*/5 * * * *'
+    
 jobs:
   sync_notion_to_github:
     runs-on: ubuntu-latest
