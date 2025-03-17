@@ -1,6 +1,8 @@
 name: Sync Notion to GitHub
 
 on:
+  issues:
+    types: [opened, reopened, closed, deleted]
   schedule:
     - cron:  '*/5 * * * *'
     
