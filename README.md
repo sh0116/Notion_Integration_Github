@@ -1,214 +1,165 @@
+# GitHub ↔ Notion Sync
 
-<div align="center">
+## 📌 개요
+이 프로젝트는 **GitHub Issues**와 **Notion**을 자동으로 동기화하는 Python 스크립트입니다. 
 
-  <img src="assets/logo.png" alt="logo" width="200" height="auto" />
-  <h1>Awesome Readme Template</h1>
-  
-  <p>
-    An awesome README template for your projects! 
-  </p>
+### ✨ 주요 기능
+1. **GitHub → Notion 동기화**
+   - GitHub에서 Issue가 생성되거나 업데이트되면, Notion의 데이터베이스에 해당 내용이 자동으로 추가됨
+   - Issue의 제목, 본문, 링크, 상태(State) 등을 Notion에 저장
 
-  
-<!-- Badges -->
-<p>
-  <a href="https://github.com/Louis3797/awesome-readme-template/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/Louis3797/awesome-readme-template" alt="contributors" />
-  </a>
-  <a href="">
-    <img src="https://img.shields.io/github/last-commit/Louis3797/awesome-readme-template" alt="last update" />
-  </a>
-  <a href="https://github.com/Louis3797/awesome-readme-template/network/members">
-    <img src="https://img.shields.io/github/forks/Louis3797/awesome-readme-template" alt="forks" />
-  </a>
-  <a href="https://github.com/Louis3797/awesome-readme-template/stargazers">
-    <img src="https://img.shields.io/github/stars/Louis3797/awesome-readme-template" alt="stars" />
-  </a>
-  <a href="https://github.com/Louis3797/awesome-readme-template/issues/">
-    <img src="https://img.shields.io/github/issues/Louis3797/awesome-readme-template" alt="open issues" />
-  </a>
-  <a href="https://github.com/Louis3797/awesome-readme-template/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/Louis3797/awesome-readme-template.svg" alt="license" />
-  </a>
-</p>
-   
-<h4>
-    <a href="https://github.com/Louis3797/awesome-readme-template/">View Demo</a>
-  <span> · </span>
-    <a href="https://github.com/Louis3797/awesome-readme-template">Documentation</a>
-  <span> · </span>
-    <a href="https://github.com/Louis3797/awesome-readme-template/issues/">Report Bug</a>
-  <span> · </span>
-    <a href="https://github.com/Louis3797/awesome-readme-template/issues/">Request Feature</a>
-  </h4>
-</div>
+2. **Notion → GitHub 동기화**
+   - Notion에서 새롭게 작성된 페이지를 5분마다 GitHub에 Markdown 파일로 저장
+   - Notion 페이지의 제목, 내용, 테이블 등을 Markdown 형식으로 변환하여 GitHub에 Commit
 
-<br />
+---
 
-<!-- Table of Contents -->
-# Table of Contents
+## 🚀 사용 방법
 
-- [About the Project](#about-the-project)
-  * [Tech Stack](#tech-stack)
-  * [Features](#features)
-  * [Color Reference](#color-reference)
-  * [Environment Variables](#environment-variables)
-- [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-  * [Run Locally](#run-locally)
-- [Usage](#usage)
-- [Contributing](#contributing)
-  * [Code of Conduct](#code-of-conduct)
-- [License](#license)
-- [Contact](#contact)
-
-
-<!-- About the Project -->
-## About the Project
-
-<div align="center"> 
-  <img src="https://placehold.co/600x400?text=Your+Screenshot+here" alt="screenshot" />
-</div>
-
-
-<!-- TechStack -->
-### Tech Stack
-
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
-    <li><a href="https://nextjs.org/">Next.js</a></li>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-    <li><a href="https://tailwindcss.com/">TailwindCSS</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-    <li><a href="https://go.dev/">Golang</a></li>
-    <li><a href="https://nestjs.com/">Nest.js</a></li>
-    <li><a href="https://socket.io/">SocketIO</a></li>
-    <li><a href="https://www.prisma.io/">Prisma</a></li>    
-    <li><a href="https://www.apollographql.com/">Apollo</a></li>
-    <li><a href="https://graphql.org/">GraphQL</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.mysql.com/">MySQL</a></li>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-    <li><a href="https://redis.io/">Redis</a></li>
-    <li><a href="https://neo4j.com/">Neo4j</a></li>
-    <li><a href="https://www.mongodb.com/">MongoDB</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>DevOps</summary>
-  <ul>
-    <li><a href="https://www.docker.com/">Docker</a></li>
-    <li><a href="https://www.jenkins.io/">Jenkins</a></li>
-    <li><a href="https://circleci.com/">CircleCLI</a></li>
-  </ul>
-</details>
-
-<!-- Features -->
-### Features
-
-- Feature 1
-- Feature 2
-- Feature 3
-
-<!-- Color Reference -->
-### Color Reference
-
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Primary Color | ![#222831](https://via.placeholder.com/10/222831?text=+) #222831 |
-| Secondary Color | ![#393E46](https://via.placeholder.com/10/393E46?text=+) #393E46 |
-| Accent Color | ![#00ADB5](https://via.placeholder.com/10/00ADB5?text=+) #00ADB5 |
-| Text Color | ![#EEEEEE](https://via.placeholder.com/10/EEEEEE?text=+) #EEEEEE |
-
-
-<!-- Env Variables -->
-### Environment Variables
-
-To run this project, you will need to add the following environment variables to your .env file
-
-`API_KEY`
-
-`ANOTHER_API_KEY`
-
-<!-- Getting Started -->
-## Getting Started
-
-<!-- Prerequisites -->
-### Prerequisites
-
-This project uses Yarn as package manager
+### 1️⃣ 환경 변수 설정
+다음 환경 변수를 설정해야 합니다:
 
 ```bash
- npm install --global yarn
+export PERSONAL_GITHUB_ACCESS_KEY=your_github_access_token
+export REPO_OWNER=your_github_username
+export REPO_NAME=your_repository_name
+export NOTION_KEY=your_notion_integration_token
+export NOTION_DATABASE_ID=your_notion_database_id
 ```
 
-<!-- Installation -->
-### Installation
-
-Install my-project with npm
+### 2️⃣ Python 환경 설정
 
 ```bash
-  yarn install my-project
-  cd my-project
+git clone https://github.com/your-username/your-repository.git
+cd your-repository
+pip install -r requirements.txt
 ```
 
-
-<!-- Run Locally -->
-### Run Locally
-
-Clone the project
-
+### 3️⃣ 실행 방법
+#### GitHub → Notion 동기화
 ```bash
-  git clone https://github.com/Louis3797/awesome-readme-template.git
+python main.py sync_github_to_notion
 ```
-
-Go to the project directory
-
+#### Notion → GitHub 동기화
 ```bash
-  cd my-project
+python main.py sync_notion_to_github
 ```
 
-Install dependencies
+---
 
-```bash
-  yarn install
+## 🔄 GitHub Actions 자동화
+### GitHub Issue 생성 시 Notion으로 동기화
+GitHub Issue가 생성되거나 상태가 변경될 때 자동으로 Notion에 반영됩니다.
+
+`.github/workflows/sync_github_to_notion.yml`:
+
+```yaml
+name: Sync GitHub Issues to Notion
+
+on:
+  issues:
+    types: [opened, reopened, closed, deleted]
+
+jobs:
+  sync_github_to_notion:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r github-issues-integration-notion_src/requirements.txt
+
+      - name: Run sync_github_to_notion
+        run: python github-issues-integration-notion_src/main.py sync_github_to_notion
+        env:
+          PERSONAL_GITHUB_ACCESS_KEY: ${{ secrets.PERSONAL_GITHUB_ACCESS_KEY }}
+          REPO_OWNER: ${{ github.repository_owner }}
+          REPO_NAME: ${{ github.event.repository.name }}
+          NOTION_KEY: ${{ secrets.NOTION_KEY }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
 ```
 
-Start the server
+### Notion 페이지를 5분마다 GitHub에 동기화
+5분마다 Notion 페이지를 GitHub에 Markdown 파일로 저장합니다.
 
-```bash
-  yarn start
+`.github/workflows/sync_notion_to_github.yml`:
+
+```yaml
+name: Sync Notion to GitHub
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+
+jobs:
+  sync_notion_to_github:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r github-issues-integration-notion_src/requirements.txt
+
+      - name: Run sync_notion_to_github
+        run: python github-issues-integration-notion_src/main.py sync_notion_to_github
+        env:
+          PERSONAL_GITHUB_ACCESS_KEY: ${{ secrets.PERSONAL_GITHUB_ACCESS_KEY }}
+          REPO_OWNER: ${{ github.repository_owner }}
+          REPO_NAME: ${{ github.event.repository.name }}
+          NOTION_KEY: ${{ secrets.NOTION_KEY }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID2 }}
 ```
 
+---
 
-<!-- Usage -->
-## Usage
+## 📌 코드 설명
+### 🔹 `sync_github_to_notion()`
+- GitHub에서 Issue를 가져와 Notion 데이터베이스에 추가/업데이트
+- Issue의 제목, 본문, 생성일, 상태(State) 등을 저장
 
-Use this space to tell a little more about your project and how it can be used. Show additional screenshots, code samples, demos or link to other resources.
+### 🔹 `sync_notion_to_github()`
+- Notion에서 페이지를 가져와 Markdown 형식으로 변환 후 GitHub에 커밋
+- 페이지가 5분 이내에 수정된 경우에만 업데이트
 
+### 🔹 `fetch_page_blocks(page_id)`
+- Notion의 페이지 내용을 블록 단위로 가져와 Markdown으로 변환
 
-```javascript
-import Component from 'my-project'
+### 🔹 `convert_rich_text_to_markdown(rich_text)`
+- Notion의 리치 텍스트를 Markdown 스타일로 변환
+- 굵게, 기울임, 밑줄, 코드 블록 등을 지원
 
-function App() {
-  return <Component />
-}
-```
+### 🔹 `fetch_table_blocks(table_block_id)`
+- Notion 테이블을 Markdown 표로 변환
+
+---
+
+## 🛠️ 기술 스택
+- **언어**: Python 3.10
+- **라이브러리**:
+  - `requests` (Notion API 호출)
+  - `notion_client` (Notion API 연결)
+  - `PyGithub` (GitHub API 연동)
+- **GitHub Actions**: 자동화된 동기화 실행
+
+---
 
 
 <!-- Contributing -->
@@ -225,10 +176,8 @@ function App() {
 Please read the [Code of Conduct](https://github.com/Louis3797/awesome-readme-template/blob/master/CODE_OF_CONDUCT.md)
 
 
-<!-- License -->
-## License
-
-No License
+## 📜 라이선스
+이 프로젝트는 MIT 라이선스를 따릅니다.
 
 
 <!-- Contact -->
