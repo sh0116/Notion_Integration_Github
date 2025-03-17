@@ -2,7 +2,7 @@ name: Sync Notion to GitHub
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '5 * * * *'
 
 jobs:
   sync_notion_to_github:
