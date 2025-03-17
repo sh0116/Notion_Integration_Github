@@ -218,7 +218,8 @@ def sync_notion_to_github():
 
     query = notion.databases.query(database_id=database_id)
     now = datetime.datetime.utcnow()
-
+    print(now)
+    
     for page in query["results"]:
         markdown_content = ""
 
