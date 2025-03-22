@@ -18,13 +18,15 @@
 
 ### 1️⃣ 환경 변수 설정
 다음 환경 변수를 설정해야 합니다:
+GITHUB Actions 환경 변수 설정 (https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/store-information-in-variables)
+settings > Secrets and variables > actions
 
 ```bash
-export PERSONAL_GITHUB_ACCESS_KEY=your_github_access_token
-export REPO_OWNER=your_github_username
-export REPO_NAME=your_repository_name
-export NOTION_KEY=your_notion_integration_token
-export NOTION_DATABASE_ID=your_notion_database_id
+PERSONAL_GITHUB_ACCESS_KEY=your_github_access_token
+REPO_OWNER=your_github_username
+REPO_NAME=your_repository_name
+NOTION_KEY=your_notion_integration_token
+NOTION_DATABASE_ID=your_notion_database_id
 ```
 
 ### 2️⃣ Python 환경 설정
