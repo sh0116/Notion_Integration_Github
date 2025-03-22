@@ -18,8 +18,9 @@
 
 ### 1️⃣ 환경 변수 설정
 다음 환경 변수를 설정해야 합니다:
-GITHUB Actions 환경 변수 설정 (https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/store-information-in-variables)
-settings > Secrets and variables > actions
+- GITHUB Actions 환경 변수 설정
+- settings > Secrets and variables > actions
+- (https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/store-information-in-variables)
 
 ```bash
 PERSONAL_GITHUB_ACCESS_KEY=your_github_access_token
