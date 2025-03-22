@@ -30,24 +30,6 @@ NOTION_KEY=your_notion_integration_token
 NOTION_DATABASE_ID=your_notion_database_id
 ```
 
-### 2️⃣ Python 환경 설정
-
-```bash
-git clone https://github.com/your-username/your-repository.git
-cd your-repository
-pip install -r requirements.txt
-```
-
-### 3️⃣ 실행 방법
-#### GitHub → Notion 동기화
-```bash
-python main.py sync_github_to_notion
-```
-#### Notion → GitHub 동기화
-```bash
-python main.py sync_notion_to_github
-```
-
 ---
 
 ## 🔄 GitHub Actions 자동화
